@@ -1,6 +1,6 @@
 # ORCExtractor
 
-![GitHub last commit](https://img.shields.io/github/last-commit/dupss/ORCExtractor) ![GitHub release-date](https://img.shields.io/github/release-date/dupss/ORCExtractor)  
+![GitHub last commit](https://img.shields.io/github/last-commit/dupss/ORCExtractor) 
 
 This script extracts DFIR ORC Archives and
 
