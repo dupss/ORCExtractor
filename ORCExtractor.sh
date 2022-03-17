@@ -1,14 +1,16 @@
 #!/bin/bash
 
-usage() {                                 # Function: Print a help message.
+# Function prints a help message
+usage() {                                 
   echo "Usage: $0 [ -i ORCs DIRECTORY ] [ -p PASSWORD ]" 1>&2
   exit 1
 }
 
-#
-while getopts i:p:h: flag
+
+# Set arguements
+while getopts i:p: arg
 do
-    case "${flag}" in
+    case "${arg}" in
         i) collect_dir=${OPTARG};;
         p) password=${OPTARG};;
         *) usage;;
@@ -16,7 +18,7 @@ do
 done
 
 
-# Decompression des fichiers .7z de facon recursive
+# Orcs collects recursive decompression 
 nb=$(find $collect_dir -name "*.7z" |wc -l)
 if [ "$nb" -ne 0 ];
 then
@@ -40,5 +42,5 @@ for file in $(find $collect_dir -name "*_data")
 	    mv $file $newname
     done
 
-else echo aucune archive 7z trouvée ;
+else echo No Archive found! ;
 fi
