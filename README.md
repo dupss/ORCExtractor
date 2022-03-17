@@ -10,5 +10,5 @@ This script extracts DFIR ORC Archives and
 ```
 git clone https://github.com/dupss/ORCExtractor.git
 cd ORCExtractor
-./ORCExtractor -i <collect_dir> -p <archive_password>
+./ORCExtractor.sh -i <collect_dir> -p <archive_password>
 ```
