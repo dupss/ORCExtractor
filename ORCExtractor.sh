@@ -1,5 +1,17 @@
 #!/bin/bash
-# decompression des fichiers .7z de facon recursive
+
+#
+while getopts r:p: flag
+do
+    case "${flag}" in
+        r) dir=${OPTARG};;
+        p) password=${OPTARG};;
+    esac
+done
+echo $password
+echo $dir
+
+# Decompression des fichiers .7z de facon recursive
 nb=$(find . -name "*.7z" |wc -l)
 if [ "$nb" -ne 0 ];
 then
@@ -12,7 +24,7 @@ then
             do
                 echo "$fic"
                 dir="${fic%%.7z}"
-                7z e "$fic" -o"$dir" -p"avproof"
+                7z e "$fic" -o"$dir" -p$password
 	    done
 	done
 
