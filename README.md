@@ -11,5 +11,5 @@ https://github.com/dfir-orc
 ```
 git clone https://github.com/dupss/ORCExtractor.git
 cd ORCExtractor
-./ORCExtractor.sh -i <collect_dir> -p <archive_password>
+./ORCExtractor.sh -i <orcs_directory> -p <archive_password>
 ```
