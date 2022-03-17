@@ -2,10 +2,11 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/dupss/ORCExtractor) 
 
-This script extracts DFIR ORC Archives and
+Extracts DFIR-ORC results.
+
+https://github.com/dfir-orc
 
 ## Quick start 
-
 
 ```
 git clone https://github.com/dupss/ORCExtractor.git
